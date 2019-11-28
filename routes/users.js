@@ -12,7 +12,7 @@ router.get('/history', function (req, res, next) {
 });
 router.post('/history', function (req, res, next) {
   vardate = new Date();
-  chatHistory.push({username: req.body.username, content: req.body.content, timestamp: req.body.timestamp}); res.json({ message: 'Historycreated!' });
+  chatHistory.push({username: req.body.username, content: req.body.content, timestamp: req.body.timestamp, color: req.body.color}); res.json({ message: 'Historycreated!' });
 });
 
 module.exports = router;
