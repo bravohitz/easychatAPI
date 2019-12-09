@@ -12,7 +12,7 @@ router.get('/history', function (req, res, next) {
 });
 router.get('/historyamount', function (req, res, next) {
   msgamount = chatHistory.length
-  res.send(msgamount);
+  res.send({'historyLength': msgamoun});
 });
 router.post('/history', function (req, res, next) {
   vardate = new Date();
