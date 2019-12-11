@@ -28,7 +28,8 @@ router.post('/usernames', function (req, res, next) {
   counter++;
 });
 router.post('/changeusername', function (req, res, next) {
-   usernames.find(username => username.username === req.body.usernameold).username = req.body.username;
+   var idOldUsername = usernames.indexOf(usernames.find(username => username.username === req.body.usernameold));
+   usernames[idOldUsername].username = req.body.username;
    res.json({ message: "funktionierts?"});
 });
 
