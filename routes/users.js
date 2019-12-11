@@ -23,11 +23,13 @@ router.get('/usernames', function (req, res, next) {
   res.send(usernames);
 });
 router.post('/usernames', function (req, res, next) {
-  usernames.push({ username: req.body.username, id: counter, color: req.body.color}); res.json({ message: 'Username added!' });
+  usernames.push({ username: req.body.username, id: counter, color: req.body.color}); 
+  res.json({ message: 'Username added!' });
   counter++;
 });
 router.post('/changeusername', function (req, res, next) {
    usernames[usernames.indexOf(req.body.usernameold)] = req.body.username;
+   res.json({ message: usernames.indexOf(req.body.usernameold)});
 });
 
 module.exports = router;
