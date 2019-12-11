@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var allowedOrigins = ['http://localhost:4200',
-  'https://easychatgroup4.herokuapp.com/'];
+  'http://easychatgroup4.herokuapp.com/'];
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
