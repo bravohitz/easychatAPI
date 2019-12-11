@@ -27,7 +27,7 @@ router.post('/usernames', function (req, res, next) {
   counter++;
 });
 router.post('/changeusername', function (req, res, next) {
-   
+   usernames[usernames.indexOf(req.body.usernameold)] = req.body.username;
 });
 
 module.exports = router;
