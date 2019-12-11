@@ -11,9 +11,9 @@ router.get('/', function (req, res, next) {
 router.get('/history', function (req, res, next) {
   res.send(chatHistory);
 });
-router.get('/historyLength', function (req, res, next) {
+router.get('/historylength', function (req, res, next) {
   msgamount = chatHistory.length
-  res.send({'historyLength': msgamount});
+  res.send({'historylength': msgamount});
 });
 router.post('/history', function (req, res, next) {
   vardate = new Date();
