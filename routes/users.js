@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 router.get('/history', function (req, res, next) {
   res.send(chatHistory);
 });
-router.get('/historyamount', function (req, res, next) {
+router.get('/historyLength', function (req, res, next) {
   msgamount = chatHistory.length
   res.send({'historyLength': msgamount});
 });
@@ -30,7 +30,7 @@ router.post('/usernames', function (req, res, next) {
 router.post('/changeusername', function (req, res, next) {
    var idOldUsername = usernames.indexOf(usernames.find(username => username.username === req.body.usernameold));
    usernames[idOldUsername].username = req.body.username;
-   res.json({ message: "funktionierts?"});
+   res.json({ message: "Username changed"});
 });
 
 
