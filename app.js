@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
-/*app.use(cors({
+app.use(cors({
   origin: function (origin, callback) {
     // allow requests with no origin 
     // (like mobile apps or curl requests)
@@ -34,7 +34,7 @@ app.use(cors());
     }
     return callback(null, true);
   }
-}));*/
+}));
 
 app.use('/', indexRouter);
 app.use('/api', usersRouter);
